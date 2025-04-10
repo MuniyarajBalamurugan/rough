@@ -137,12 +137,12 @@ document.getElementById('submit').addEventListener("click",function(event)
     {
     let array=getvalue()
     console.log(array)
-   fetch("http://mathstut.free.nf/portfolio/backend.php",
+   fetch("https://mathstut.free.nf/portfolio/backend.php",
 
         {
-            mode:'no-cors',
+    
             method:'POST',
-            header:{'content-type':'application/json'},
+            header:{'Content-type':'application/json'},
             body:JSON.stringify(array)
         }
     )
