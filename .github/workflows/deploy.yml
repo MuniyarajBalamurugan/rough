@@ -3,7 +3,7 @@ name: Deploy Website
 on:
   push:
     branches:
-      - master  # or main, if that's your branch name
+      - master  # Trigger workflow on push to 'master' branch
 
 jobs:
   deploy:
@@ -17,4 +17,5 @@ jobs:
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: .
+          publish_dir: .  # Make sure this points to your website files
+          publish_branch: gh-pages  # This pushes to the gh-pages branch
